@@ -57,7 +57,7 @@ if False:
             print(item)
 
 for line in open("chai.py"):
-    # u may also see open('..').readlines() which is pretty haevy one memory
+    # u may also see open('..').readlines() which is pretty haevy on memory
     print(line, end="")
 
 f = open("chai.py")

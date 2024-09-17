@@ -14,7 +14,7 @@
 
 - type()
 - import os, sys, math, random, copy
-- ps.getcwd() - cwd:current working directory
+- os.getcwd() - cwd:current working directory
 - sys.platform
 - math.pi, math.floor(), math.trunc() - rounds off and gives whichever is closest to 0
 - random.random(), random.randint(1,100), random.choice(list), random.shuffle(list)
@@ -54,7 +54,7 @@
 - repr() provides a string representation suitable for debugging, str() provides a more user-friendly string representation, and print() is a function for outputting text or values to the console internally useing str() to get object and print it.
 - for learning about slicing operations we can use the string '0123456789' and play with [: :], yes it can take a third parameter. this is actually not used in production
 - we have upper(), lower(), strip(), replace("string1","string2"), find(), count('str'), "a" in "abc"
-- chai="masala, lemon, mint" for converting into list strip(", ")
+- chai="masala, lemon, mint" for converting into list split(", ")
 - string with variables<br>
   chai='lemon'<br>
   order='I want {} tea'<br>
@@ -71,6 +71,7 @@
 - if we do list[1:1]=['nice'] we'll insert it at 1 position and similarly we can get rid of element(s) by giving [] at thier place(s)
 - append(), remove('string'), pop(), insert(1,'nice'), copy(), count()
 - squared_nums = [x**2 for x in range(10)]
+- list(enumerate(tuple)) gives [(0,'a'),(1,'b'),(2,'c')]
 
 ## dictionary
 

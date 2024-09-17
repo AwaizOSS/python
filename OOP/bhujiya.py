@@ -19,7 +19,7 @@ class Car:
         print("petrol or diesel")
 
     @staticmethod
-    # this is a decorator
+    # this is a decorator, they are higher-order functions
     def general_description():
         # self as an argument is needed to make it accessible from objects
         return "car is a means of transport"
@@ -44,3 +44,5 @@ superCar = Car("lambo", "aventador")
 # print(superCar.model)
 # print(Car.general_description())
 print(isinstance(superCar, Car))
+
+[].append()

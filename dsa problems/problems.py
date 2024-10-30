@@ -123,24 +123,24 @@ def reverseString(str="123456789"):
 def second_largest_element_from_array(array=[4, 8, 6, 2, 1, 5, 3, 7, 0]):
     # array.sort() changes the original list
     if len(array) > 2:  # always remember the edge cases
-        new_array = sorted(array)  # reverse=True cal also be passed with array
+        new_array = sorted(array)  # reverse=True can also be passed with array
         print(new_array)
         return new_array[-2]
 
 
-# def second_largest_element_from_array(array=[4, 8, 6, 2, 1, 5, 3, 7, 0]):
-#     if len(array) < 2:
-#         return None  # Handle edge case where there are fewer than 2 elements
+def second_largest_element_from_array2(array=[4, 8, 6, 2, 1, 5, 3, 7, 0]):
+    if len(array) < 2:
+        return None  # Handle edge case where there are fewer than 2 elements
 
-#     first_largest = second_largest = float('-inf')
-#     for num in array:
-#         if num > first_largest:
-#             second_largest = first_largest
-#             first_largest = num
-#         elif num > second_largest and num != first_largest:
-#             second_largest = num
+    first_largest = second_largest = float("-inf")
+    for num in array:
+        if num > first_largest:
+            second_largest = first_largest
+            first_largest = num
+        elif num > second_largest and num != first_largest:
+            second_largest = num
 
-#     return second_largest
+    return second_largest
 
 
 def palindrome_check(str="racecar"):

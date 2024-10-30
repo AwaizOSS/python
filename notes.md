@@ -31,7 +31,7 @@
 
 ## data types
 
-- string
+- string - immutable
   string[1:5] - gives letters from 1 till 4
 - list=[] - mutable
 - tuple=() - generally faster and more memory-efficient than lists because of their immutability

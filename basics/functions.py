@@ -55,6 +55,6 @@ def even_till(n):
 
 
 for i in even_till(11):
-    pass
+    print(i)
 # the way we have defined the function, lets the function remember what last result it produced and continue from there for this particular loop
 # print(i)

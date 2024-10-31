@@ -1,4 +1,6 @@
 # https://projects.100xdevs.com/tracks/dsa/dsa1
+
+
 def no_of_good_pairs(nums=[1, 2, 3, 1, 1, 3]):
     """
     Given an array of integers nums, return the number of good pairs.
@@ -28,7 +30,7 @@ def no_of_good_pairs(nums=[1, 2, 3, 1, 1, 3]):
 
 def no_of_good_pairs2(nums=[1, 2, 3, 1, 1, 3]):
     no_of_good_pairs = 0
-    frequency = [0] * 101  # works only when array isnt supposed too big.
+    frequency = [0] * 101  # using frequency array concept
     for i, num1 in enumerate(nums):
         no_of_good_pairs += frequency[nums[i]]
         frequency[nums[i]] += 1
@@ -37,3 +39,4 @@ def no_of_good_pairs2(nums=[1, 2, 3, 1, 1, 3]):
 
 
 # hw is to determine the pairs using the same approach & to handle negative numbers
+# there are more problems apart from hw in the slides

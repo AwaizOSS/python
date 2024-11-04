@@ -36,3 +36,52 @@ def nearbySquares(i, sum_b, sum_c):
     two = nearbySquares(i + 1, sum_b, sum_c + a[i])
 
     return min(one, two)
+
+
+import math
+
+
+def merge_sort(b=[7, 4, 2, 6, 8, 5]):
+    def recursion(start, end):
+        if start == end:
+            return
+
+        mid = math.floor((start + end) / 2)
+        recursion(start, mid)
+        recursion(mid + 1, end)
+
+        combine(start, mid, end)
+
+    def combine(l, m, n):
+        temp = []
+        start = l  # Save the original starting index for later
+
+        # Merge two halves into temp
+        left_index, right_index = l, m + 1
+        while left_index <= m and right_index <= n:
+            if b[left_index] <= b[right_index]:  # Sort in ascending order
+                temp.append(b[left_index])
+                left_index += 1
+            else:
+                temp.append(b[right_index])
+                right_index += 1
+
+        # Append any remaining elements from the left half
+        while left_index <= m:
+            temp.append(b[left_index])
+            left_index += 1
+
+        # Append any remaining elements from the right half
+        while right_index <= n:
+            temp.append(b[right_index])
+            right_index += 1
+
+        # Copy back to b from temp
+        for i, value in enumerate(temp):
+            b[start + i] = value
+
+    recursion(0, len(b) - 1)
+    return b
+
+
+print(merge_sort())

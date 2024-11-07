@@ -84,4 +84,22 @@ def merge_sort(b=[7, 4, 2, 6, 8, 5]):
     return b
 
 
-print(merge_sort())
+no_of_ways_to_climb = 0
+
+
+def staircase(stairs_left):
+    """
+    You have N stairs in front of you. At every step, you can either climb up by 1, 2 or 3 stairs.
+    How many ways are there to climb to the top?
+    """
+
+    if stairs_left == 0:
+        return 1
+    elif stairs_left < 0:
+        return 0
+
+    return (
+        staircase(stairs_left - 1)
+        + staircase(stairs_left - 2)
+        + staircase(stairs_left - 3)
+    )
